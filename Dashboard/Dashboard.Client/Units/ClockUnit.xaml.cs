@@ -6,7 +6,14 @@ namespace Dashboard.Client.Units
 {
     public partial class ClockUnit : Unit
     {
-        public ClockUnit() : base(0,0)
+        public ClockUnit()
+            : this(0, 0, 1, 2)
+        {
+            
+        }
+
+        public ClockUnit(int row, int column, int rowSpan, int columnSpan) 
+            : base(row,column,rowSpan,columnSpan)
         {
             InitializeComponent();
         }

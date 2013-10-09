@@ -9,10 +9,12 @@ namespace Dashboard.Client.ViewModels
         {
             Dashboard = new DashboardViewModel();
             
-            var clock = new VisualTreeWalkingClockUnit();
-            clock.Initialize();
-
+            var clock = new ClockUnit();
+            
+            var secondClock = new ClockUnit(1, 1, 1, 3);
+            
             Dashboard.Units.Add(clock);
+            Dashboard.Units.Add(secondClock);
         }
 
         public MainViewModel(DashboardViewModel dashboard)
