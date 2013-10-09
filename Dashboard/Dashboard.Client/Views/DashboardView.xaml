@@ -44,13 +44,5 @@
             </Grid.ColumnDefinitions>
         </Grid>
     </ItemsPanelTemplate>
-</ItemsControl.ItemsPanel>    
- <ItemsControl.ItemTemplate>
-     <DataTemplate DataType="units:Unit">
-         <StackPanel>
-             <TextBlock>Item</TextBlock>
-             <ContentPresenter></ContentPresenter>
-         </StackPanel>
-     </DataTemplate>
- </ItemsControl.ItemTemplate>   
+</ItemsControl.ItemsPanel>      
 </ItemsControl>

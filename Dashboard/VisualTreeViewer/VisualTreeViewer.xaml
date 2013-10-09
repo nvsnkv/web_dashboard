@@ -1,0 +1,19 @@
+﻿<sdk:TreeView x:Class="VisualTreeViewer.VisualTreeViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:visualTreeViewer="clr-namespace:VisualTreeViewer"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+<sdk:TreeView.ItemTemplate>
+    <sdk:HierarchicalDataTemplate DataType="visualTreeViewer:TreeNode" ItemsSource="{Binding Children}">
+        <TextBlock>
+            <Run Text="{Binding Item.Name}"/>
+            <Run>|</Run>
+            <Run Text="{Binding TypeInfo}"></Run>
+        </TextBlock>
+    </sdk:HierarchicalDataTemplate>
+</sdk:TreeView.ItemTemplate>
+</sdk:TreeView>
