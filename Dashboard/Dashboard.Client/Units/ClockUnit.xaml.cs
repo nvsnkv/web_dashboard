@@ -6,7 +6,7 @@ namespace Dashboard.Client.Units
 {
     public partial class ClockUnit : Unit
     {
-        public ClockUnit()
+        public ClockUnit() : base(0,0)
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace Dashboard.Client.Units
             public string CurrentTime
             {
                 get { return _currentTime; }
-                private set
+                protected set
                 {
                     if (value == _currentTime) return;
                     _currentTime = value;

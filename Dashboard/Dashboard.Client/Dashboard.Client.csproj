@@ -83,6 +83,7 @@
       <DependentUpon>ClockUnit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Units\Unit.cs" />
+    <Compile Include="Units\VisualTreeWalkingClockUnit.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
