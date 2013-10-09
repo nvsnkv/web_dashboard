@@ -112,12 +112,6 @@
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\VisualTreeViewer\VisualTreeViewer.csproj">
-      <Project>{a60be59a-0f23-40bb-9d95-b0f2e25120f1}</Project>
-      <Name>VisualTreeViewer</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
