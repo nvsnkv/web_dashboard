@@ -1,10 +1,15 @@
 ﻿using System.Collections.ObjectModel;
-using System.Windows;
+using Dashboard.Client.Units;
 
 namespace Dashboard.Client.ViewModels
 {
     public class DashboardViewModel : ViewModelBase
     {
-        public ObservableCollection<UIElement> Views { get; private set; }
+        public ObservableCollection<Unit> Units { get; private set; }
+
+        public DashboardViewModel()
+        {
+            Units = new ObservableCollection<Unit>();
+        }
     }
 }
