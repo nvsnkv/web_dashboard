@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Browser;
+using Dashboard.Client.ViewModels;
 
 namespace Dashboard.Client
 {
@@ -19,7 +20,10 @@ namespace Dashboard.Client
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            RootVisual = new MainPage();
+            RootVisual = new MainPage
+            {
+                DataContext = new MainViewModel()
+            };
         }
 
         private void Application_Exit(object sender, EventArgs e)
