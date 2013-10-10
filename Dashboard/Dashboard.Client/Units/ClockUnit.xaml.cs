@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Threading;
 using Dashboard.Client.ViewModels;
 
@@ -18,12 +19,7 @@ namespace Dashboard.Client.Units
             InitializeComponent();
         }
 
-        protected override void DoInitialize()
-        {
-            DataContext = new ViewModel();
-        }
-
-        public class ViewModel:ViewModelBase
+        public class ClockViewModel:ViewModelBase
         {
             private readonly DispatcherTimer _timer = new DispatcherTimer
             {
@@ -43,7 +39,7 @@ namespace Dashboard.Client.Units
                 }
             }
 
-            public ViewModel()
+            public ClockViewModel()
             {
                 _timer.Tick += OnTimerTick;
 
@@ -52,8 +48,13 @@ namespace Dashboard.Client.Units
 
             protected virtual void OnTimerTick(object sender, EventArgs e)
             {
-                CurrentTime = DateTime.Now.ToShortTimeString();
+                CurrentTime = DateTime.Now.ToLongTimeString();
             }
+        }
+
+        public override INotifyPropertyChanged ViewModel
+        {
+            get { return new ClockViewModel(); }
         }
     }
 }

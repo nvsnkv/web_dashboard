@@ -5,6 +5,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:units="clr-namespace:Dashboard.Client.Units"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
-    <TextBlock Text="{Binding CurrentTime}" />
+    d:DesignHeight="300" d:DesignWidth="400"
+    >
+    
+    <TextBlock Foreground="Orange" HorizontalAlignment="Center" VerticalAlignment="Center" 
+               FontSize="30" Text="{Binding CurrentTime}" />
+    
 </units:Unit>

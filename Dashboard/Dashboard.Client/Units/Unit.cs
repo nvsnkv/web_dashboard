@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Dashboard.Client.Units
@@ -23,16 +25,18 @@ namespace Dashboard.Client.Units
         public bool Initialized { get; private set; }
         public bool Positioned { get; private set; }
 
+        public abstract INotifyPropertyChanged ViewModel { get; }
+
         public void SetPosition()
         {
             SetAttachedProperties(this);
         }
 
-        public void Initialize()
+        public virtual void Initialize()
         {
             if (Initialized) return;
 
-            DoInitialize();
+            DataContext = ViewModel;
             Initialized = true;
         }
 
@@ -47,7 +51,5 @@ namespace Dashboard.Client.Units
 
             Positioned = true;
         }
-
-        protected abstract void DoInitialize();
     }
 }

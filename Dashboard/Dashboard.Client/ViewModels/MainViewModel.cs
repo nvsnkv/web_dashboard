@@ -9,12 +9,9 @@ namespace Dashboard.Client.ViewModels
         {
             Dashboard = new DashboardViewModel();
             
-            var clock = new ClockUnit();
-            
-            var secondClock = new ClockUnit(1, 1, 1, 3);
+            var clock = new ClockUnit(0,13,2,4);
             
             Dashboard.Units.Add(clock);
-            Dashboard.Units.Add(secondClock);
         }
 
         public MainViewModel(DashboardViewModel dashboard)

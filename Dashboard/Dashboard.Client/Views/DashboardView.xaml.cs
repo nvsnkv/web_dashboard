@@ -32,6 +32,7 @@ namespace Dashboard.Client.Views
                 if (!unit.Positioned)
                     unit.SetPosition();
             }
+
             base.PrepareContainerForItemOverride(element, item);
         }
     }
